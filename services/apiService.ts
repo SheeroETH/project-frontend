@@ -24,8 +24,11 @@ export const generatePfp = async (prompt: string, base64Image?: string): Promise
 
         const data = await response.json();
         return data.result;
-    } catch (error) {
+    } catch (error: any) {
         console.error("Error calling backend:", error);
+        if (error.name === 'TypeError' && error.message === 'Failed to fetch') {
+            throw new Error("Cannot connect to server. If testing on mobile, ensure you are using your computer's IP address, not localhost.");
+        }
         throw error;
     }
 };

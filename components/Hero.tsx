@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
         </button>
       </div>
 
-      <h1 className="text-6xl md:text-8xl font-semibold text-black tracking-normal mb-4 drop-shadow-sm">
+      <h1 className="text-4xl md:text-6xl lg:text-8xl font-semibold text-black tracking-normal mb-4 drop-shadow-sm">
         Baby Factory
       </h1>
       <p className="text-gray-500 text-lg md:text-xl font-light tracking-wide">

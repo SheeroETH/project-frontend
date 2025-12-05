@@ -16,8 +16,8 @@ const PfpGenerator: React.FC = () => {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      if (file.size > 5 * 1024 * 1024) {
-        setError("Image size too large. Please upload an image under 5MB.");
+      if (file.size > 15 * 1024 * 1024) {
+        setError("Image size too large. Please upload an image under 15MB.");
         return;
       }
 
@@ -143,7 +143,7 @@ const PfpGenerator: React.FC = () => {
               className="hidden"
             />
             <div
-              className={`h-full aspect-square md:w-16 md:h-16 rounded-2xl flex items-center justify-center border-2 transition-all duration-200 ${selectedImage ? 'border-gray-200 bg-gray-50' : 'border-gray-200 bg-gray-50'}`}
+              className={`h-20 w-full md:w-16 md:h-16 rounded-2xl flex items-center justify-center border-2 transition-all duration-200 ${selectedImage ? 'border-gray-200 bg-gray-50' : 'border-gray-200 bg-gray-50'}`}
             >
               {selectedImage ? (
                 <img src={selectedImage} alt="Preview" className="w-full h-full object-cover rounded-xl" />
@@ -163,7 +163,7 @@ const PfpGenerator: React.FC = () => {
           </div>
 
           {/* Text Input */}
-          <div className="flex-grow relative">
+          <div className="flex-grow relative h-16 md:h-auto">
             <input
               type="text"
               value={prompt}
