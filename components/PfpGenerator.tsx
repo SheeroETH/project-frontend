@@ -131,7 +131,7 @@ const PfpGenerator: React.FC = () => {
       <div className="bg-white/80 backdrop-blur-xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl p-6 mb-8">
 
         {/* Input Area */}
-        <div className="flex flex-col md:flex-row gap-4 items-stretch">
+        <div className="flex flex-col md:flex-row gap-4 items-stretch w-full">
 
           {/* File Upload Trigger */}
           <div className="relative group shrink-0">
@@ -143,7 +143,7 @@ const PfpGenerator: React.FC = () => {
               className="hidden"
             />
             <div
-              className={`h-20 w-full md:w-16 md:h-16 rounded-2xl flex items-center justify-center border-2 transition-all duration-200 ${selectedImage ? 'border-gray-200 bg-gray-50' : 'border-gray-200 bg-gray-50'}`}
+              className={`h-24 w-full md:w-16 md:h-16 rounded-2xl flex items-center justify-center border-2 transition-all duration-200 ${selectedImage ? 'border-gray-200 bg-gray-50' : 'border-gray-200 bg-gray-50'}`}
             >
               {selectedImage ? (
                 <img src={selectedImage} alt="Preview" className="w-full h-full object-cover rounded-xl" />
@@ -163,7 +163,7 @@ const PfpGenerator: React.FC = () => {
           </div>
 
           {/* Text Input */}
-          <div className="flex-grow relative h-16 md:h-auto">
+          <div className="flex-grow relative h-16 md:h-auto w-full">
             <input
               type="text"
               value={prompt}
@@ -178,7 +178,7 @@ const PfpGenerator: React.FC = () => {
           <button
             onClick={handleGenerate}
             disabled={isLoading}
-            className={`shrink-0 h-16 px-8 rounded-2xl font-bold text-lg flex items-center justify-center space-x-2 transition-all shadow-lg shadow-gray-400
+            className={`shrink-0 h-16 w-full md:w-auto px-8 rounded-2xl font-bold text-lg flex items-center justify-center space-x-2 transition-all shadow-lg shadow-gray-400
               ${isLoading
                 ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
                 : 'bg-gradient-to-r from-[#383838] to-[#000000] text-white hover:scale-105 hover:shadow-gray-500'
