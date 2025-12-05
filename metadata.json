@@ -1,0 +1,5 @@
+{
+  "name": "Baby Factory PFP Generator",
+  "description": "Create and modify your own Baby PFP using Gemini Nano Banana model with image inputs.",
+  "requestFramePermissions": []
+}
