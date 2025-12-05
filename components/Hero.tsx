@@ -3,7 +3,7 @@ import { Hammer } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <div className="text-center pt-12 pb-6 flex flex-col items-center">
+    <div className="text-center pt-6 pb-2 flex flex-col items-center">
 
       {/* Secondary Pill */}
       <div className="mb-6 animate-fade-in-down">

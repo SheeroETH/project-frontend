@@ -143,7 +143,7 @@ const PfpGenerator: React.FC = () => {
               className="hidden"
             />
             <div
-              className={`h-24 w-full md:w-16 md:h-16 rounded-2xl flex items-center justify-center border-2 transition-all duration-200 ${selectedImage ? 'border-gray-200 bg-gray-50' : 'border-gray-200 bg-gray-50'}`}
+              className={`w-32 h-32 md:w-16 md:h-16 mx-auto md:mx-0 rounded-2xl flex items-center justify-center border-2 transition-all duration-200 ${selectedImage ? 'border-gray-200 bg-gray-50' : 'border-gray-200 bg-gray-50'}`}
             >
               {selectedImage ? (
                 <img src={selectedImage} alt="Preview" className="w-full h-full object-cover rounded-xl" />
@@ -193,9 +193,6 @@ const PfpGenerator: React.FC = () => {
               </>
             )}
           </button>
-          <div className="absolute -bottom-6 left-0 right-0 text-center">
-            <span className="text-xs text-gray-400 font-medium">{remainingGenerations} / 4 free generations left</span>
-          </div>
         </div>
 
         {error && (
